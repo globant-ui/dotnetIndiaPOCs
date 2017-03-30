@@ -1,0 +1,25 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@*To test caching*@
+@*<cache vary-by-route="id">
+    @{System.Threading.Thread.Sleep(5000); }
+</cache>*@
+
+<div>
+    <div id="CompanyDetailsSection">
+        @{
+            var id = ViewBag.id;
+        }
+
+        @await Component.InvokeAsync("CompanyDetails", new { CompanyID = id })
+    </div>
+
+    <div>        
+        <a asp-action="Index"><b>Back to Home Page</b></a>
+    </div>
+
+</div>

@@ -1,0 +1,37 @@
+﻿@model IEnumerable<BusinessEntities.CompanyStockModel> 
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<head>
+<meta name="viewport" content="width=device-width" />    
+<script src="~/lib/jquery/dist/jquery.js"></script>
+</head>
+
+    
+    <div>
+        <div id="TopStocksSection">
+
+            @*@Html.Partial("TopStocks")*@
+
+            @await Component.InvokeAsync("TopStocks")
+
+        </div>
+    </div>
+      
+    <div>
+        <a asp-action="AllStocks"><b>All Stocks</b></a>
+    </div>
+
+@*</div>*@
+
+<script type="text/javascript">
+    
+    $(function () {
+        
+        setInterval(function () { $('#TopStocksSection').load('/Home/GetTopStocks'); }, 3000);
+                
+    });
+</script>
+

@@ -1,0 +1,6 @@
+#:E:\Work\Practice\ASPNETCore\StockControl\src\StockControl\StockControl.xproj
+E:\Work\Practice\ASPNETCore\StockControl\src\StockControl\StockControl.xproj|E:\Work\Practice\ASPNETCore\StockControl\src\BusinessEntities\BusinessEntities.xproj
+E:\Work\Practice\ASPNETCore\StockControl\src\StockControl\StockControl.xproj|E:\Work\Practice\ASPNETCore\StockControl\src\BusinessServices\BusinessServices.xproj
+E:\Work\Practice\ASPNETCore\StockControl\src\BusinessServices\BusinessServices.xproj|E:\Work\Practice\ASPNETCore\StockControl\src\BusinessEntities\BusinessEntities.xproj
+E:\Work\Practice\ASPNETCore\StockControl\src\BusinessServices\BusinessServices.xproj|E:\Work\Practice\ASPNETCore\StockControl\src\DataRepository\DataRepository.xproj
+E:\Work\Practice\ASPNETCore\StockControl\src\DataRepository\DataRepository.xproj|E:\Work\Practice\ASPNETCore\StockControl\src\BusinessEntities\BusinessEntities.xproj

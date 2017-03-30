@@ -1,0 +1,39 @@
+﻿@model IEnumerable<BusinessEntities.CompanyStockModel>
+
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<head>
+
+    <meta name="viewport" content="width=device-width" />
+
+
+
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+</head>
+
+<div class="row" id="AllStocksSection">
+    @await Component.InvokeAsync("AllStocks")
+</div>
+<div>
+    @*To check data passing*@
+    @*Data from View: @ViewBag.ViewC <br />
+    Data from View Component: @ViewBag.VC <br />
+    Data from Session:@ViewBag.SessionData*@
+
+</div>
+    <div>
+        <a asp-action="Index"><b>Back to Home Page</b></a>
+    </div>
+
+    <script type="text/javascript">
+
+        $(function () {
+
+            setInterval(function () { $('#AllStocksSection').load('/Home/AllStocksComponent'); }, 3000);
+
+        });
+    </script>
