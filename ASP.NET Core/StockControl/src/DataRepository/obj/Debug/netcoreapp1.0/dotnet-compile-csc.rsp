@@ -8,8 +8,8 @@
 -debug:full
 -nostdlib
 -nologo
-"E:\Work\Practice\ASPNETCore\StockControl\src\DataRepository\obj\Debug\netcoreapp1.0\dotnet-compile.assemblyinfo.cs"
--out:"E:\Work\Practice\ASPNETCore\StockControl\src\DataRepository\bin\Debug\netcoreapp1.0\DataRepository.dll"
+"E:\Work\Practice\GITDotNET\dotnetIndiaPOCs\ASP.NET Core\StockControl\src\DataRepository\obj\Debug\netcoreapp1.0\dotnet-compile.assemblyinfo.cs"
+-out:"E:\Work\Practice\GITDotNET\dotnetIndiaPOCs\ASP.NET Core\StockControl\src\DataRepository\bin\Debug\netcoreapp1.0\DataRepository.dll"
 -r:"C:\Users\amajad.mulla\.nuget\packages\Microsoft.CSharp\4.0.1\ref\netstandard1.0\Microsoft.CSharp.dll"
 -r:"C:\Users\amajad.mulla\.nuget\packages\Microsoft.Extensions.Configuration.Abstractions\1.0.0\lib\netstandard1.0\Microsoft.Extensions.Configuration.Abstractions.dll"
 -r:"C:\Users\amajad.mulla\.nuget\packages\Microsoft.Extensions.Logging.Abstractions\1.0.0\lib\netstandard1.1\Microsoft.Extensions.Logging.Abstractions.dll"
@@ -93,6 +93,6 @@
 -r:"C:\Users\amajad.mulla\.nuget\packages\System.Threading.Timer\4.0.1\ref\netstandard1.2\System.Threading.Timer.dll"
 -r:"C:\Users\amajad.mulla\.nuget\packages\System.Xml.ReaderWriter\4.0.11\ref\netstandard1.3\System.Xml.ReaderWriter.dll"
 -r:"C:\Users\amajad.mulla\.nuget\packages\System.Xml.XDocument\4.0.11\ref\netstandard1.3\System.Xml.XDocument.dll"
--r:"E:\Work\Practice\ASPNETCore\StockControl\src\BusinessEntities\bin\Debug\netstandard1.6\BusinessEntities.dll"
-"E:\Work\Practice\ASPNETCore\StockControl\src\DataRepository\Data.cs"
-"E:\Work\Practice\ASPNETCore\StockControl\src\DataRepository\Properties\AssemblyInfo.cs"
+-r:"E:\Work\Practice\GITDotNET\dotnetIndiaPOCs\ASP.NET Core\StockControl\src\BusinessEntities\bin\Debug\netstandard1.6\BusinessEntities.dll"
+"E:\Work\Practice\GITDotNET\dotnetIndiaPOCs\ASP.NET Core\StockControl\src\DataRepository\Data.cs"
+"E:\Work\Practice\GITDotNET\dotnetIndiaPOCs\ASP.NET Core\StockControl\src\DataRepository\Properties\AssemblyInfo.cs"

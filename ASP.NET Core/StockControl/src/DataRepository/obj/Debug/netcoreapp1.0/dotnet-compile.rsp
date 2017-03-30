@@ -1,5 +1,5 @@
---temp-output:E:\Work\Practice\ASPNETCore\StockControl\src\DataRepository\obj\Debug\netcoreapp1.0\
---out:E:\Work\Practice\ASPNETCore\StockControl\src\DataRepository\bin\Debug\netcoreapp1.0\DataRepository.dll
+--temp-output:E:\Work\Practice\GITDotNET\dotnetIndiaPOCs\ASP.NET Core\StockControl\src\DataRepository\obj\Debug\netcoreapp1.0\
+--out:E:\Work\Practice\GITDotNET\dotnetIndiaPOCs\ASP.NET Core\StockControl\src\DataRepository\bin\Debug\netcoreapp1.0\DataRepository.dll
 --define:DEBUG
 --define:TRACE
 --define:NETCOREAPP1_0
@@ -95,6 +95,6 @@
 --reference:C:\Users\amajad.mulla\.nuget\packages\System.Threading.Timer\4.0.1\ref\netstandard1.2\System.Threading.Timer.dll
 --reference:C:\Users\amajad.mulla\.nuget\packages\System.Xml.ReaderWriter\4.0.11\ref\netstandard1.3\System.Xml.ReaderWriter.dll
 --reference:C:\Users\amajad.mulla\.nuget\packages\System.Xml.XDocument\4.0.11\ref\netstandard1.3\System.Xml.XDocument.dll
---reference:E:\Work\Practice\ASPNETCore\StockControl\src\BusinessEntities\bin\Debug\netstandard1.6\BusinessEntities.dll
-E:\Work\Practice\ASPNETCore\StockControl\src\DataRepository\Data.cs
-E:\Work\Practice\ASPNETCore\StockControl\src\DataRepository\Properties\AssemblyInfo.cs
+--reference:E:\Work\Practice\GITDotNET\dotnetIndiaPOCs\ASP.NET Core\StockControl\src\BusinessEntities\bin\Debug\netstandard1.6\BusinessEntities.dll
+E:\Work\Practice\GITDotNET\dotnetIndiaPOCs\ASP.NET Core\StockControl\src\DataRepository\Data.cs
+E:\Work\Practice\GITDotNET\dotnetIndiaPOCs\ASP.NET Core\StockControl\src\DataRepository\Properties\AssemblyInfo.cs
