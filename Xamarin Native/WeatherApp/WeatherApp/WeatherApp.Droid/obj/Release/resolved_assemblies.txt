@@ -1,0 +1,10 @@
+E:\Work\Practice\WeatherApp\WeatherApp\WeatherApp.Droid\obj\Release\android\assets\WeatherApp.Droid.dll
+E:\Work\Practice\WeatherApp\WeatherApp\WeatherApp.Droid\obj\Release\android\assets\Java.Interop.dll
+E:\Work\Practice\WeatherApp\WeatherApp\WeatherApp.Droid\obj\Release\android\assets\Mono.Android.dll
+E:\Work\Practice\WeatherApp\WeatherApp\WeatherApp.Droid\obj\Release\android\assets\System.Core.dll
+E:\Work\Practice\WeatherApp\WeatherApp\WeatherApp.Droid\obj\Release\android\assets\System.dll
+E:\Work\Practice\WeatherApp\WeatherApp\WeatherApp.Droid\obj\Release\android\assets\System.Xml.dll
+E:\Work\Practice\WeatherApp\WeatherApp\WeatherApp.Droid\obj\Release\android\assets\mscorlib.dll
+E:\Work\Practice\WeatherApp\WeatherApp\WeatherApp.Droid\obj\Release\android\assets\WeatherApp.dll
+E:\Work\Practice\WeatherApp\WeatherApp\WeatherApp.Droid\obj\Release\android\assets\System.Runtime.Serialization.dll
+E:\Work\Practice\WeatherApp\WeatherApp\WeatherApp.Droid\obj\Release\android\assets\System.ServiceModel.Internals.dll

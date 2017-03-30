@@ -1,0 +1,14 @@
+E:\Work\Practice\WeatherApp\WeatherApp\WeatherApp.iOS\bin\iPhone\Debug\WeatherApp.iOS.exe
+E:\Work\Practice\WeatherApp\WeatherApp\WeatherApp.iOS\bin\iPhone\Debug\WeatherApp.iOS.pdb
+E:\Work\Practice\WeatherApp\WeatherApp\WeatherApp.iOS\bin\iPhone\Debug\WeatherApp.dll
+E:\Work\Practice\WeatherApp\WeatherApp\WeatherApp.iOS\bin\iPhone\Debug\WeatherApp.pdb
+E:\Work\Practice\WeatherApp\WeatherApp\WeatherApp.iOS\bin\iPhone\Debug\WeatherApp.dll.mdb
+E:\Work\Practice\WeatherApp\WeatherApp\WeatherApp.iOS\obj\iPhone\Debug\ibtool\_BundleResourceWithLogicalName.items
+E:\Work\Practice\WeatherApp\WeatherApp\WeatherApp.iOS\obj\iPhone\Debug\actool\_PartialAppManifest.items
+E:\Work\Practice\WeatherApp\WeatherApp\WeatherApp.iOS\obj\iPhone\Debug\actool\_BundleResourceWithLogicalName.items
+E:\Work\Practice\WeatherApp\WeatherApp\WeatherApp.iOS\obj\iPhone\Debug\optimized\
+E:\Work\Practice\WeatherApp\WeatherApp\WeatherApp.iOS\obj\iPhone\Debug\WeatherApp.iOS.csprojResolveAssemblyReference.cache
+E:\Work\Practice\WeatherApp\WeatherApp\WeatherApp.iOS\obj\iPhone\Debug\WeatherApp.iOS.exe
+E:\Work\Practice\WeatherApp\WeatherApp\WeatherApp.iOS\obj\iPhone\Debug\WeatherApp.iOS.pdb
+E:\Work\Practice\WeatherApp\WeatherApp\WeatherApp.iOS\obj\iPhone\Debug\WeatherApp.iOS.exe.mdb
+E:\Work\Practice\WeatherApp\WeatherApp\WeatherApp.iOS\bin\iPhone\Debug\WeatherApp.iOS.exe.mdb

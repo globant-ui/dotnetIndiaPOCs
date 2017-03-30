@@ -1,0 +1,7 @@
+E:\Work\Practice\WeatherApp\WeatherApp\WeatherApp\bin\Release\WeatherApp.dll
+E:\Work\Practice\WeatherApp\WeatherApp\WeatherApp\bin\Release\WeatherApp.pdb
+E:\Work\Practice\WeatherApp\WeatherApp\WeatherApp\obj\Release\WeatherApp.dll
+E:\Work\Practice\WeatherApp\WeatherApp\WeatherApp\obj\Release\WeatherApp.pdb
+E:\Work\Practice\WeatherApp\WeatherApp\WeatherApp\obj\Release\WeatherApp.csprojResolveAssemblyReference.cache
+E:\Work\Practice\WeatherApp\WeatherApp\WeatherApp\obj\Release\WeatherApp.dll.mdb
+E:\Work\Practice\WeatherApp\WeatherApp\WeatherApp\bin\Release\WeatherApp.dll.mdb
