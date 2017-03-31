@@ -1,0 +1,29 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+
+}
+<script src="@Url.Content("~/lib/jquery/dist/jquery.js")"></script>
+<script src = "@Url.Content("~/lib/knockout/dist/knockout.js")"></script>
+<script src="@Url.Content("~/js/employee.js")"></script>
+
+<h3>Employee Form</h3>
+<div style="padding:10px">
+    <form id="employeeForm" name="employeeForm" method="post">
+        <p>
+            <label class="form-label">First Name:</label>
+            <input type="text" id="txtFirstName" name="txtFirstName" data-bind="value:Employee.FirstName" />
+        </p>
+        <p>
+            <label class="form-label">Last Name:</label>
+            <input type="text" id="txtLastName" name="txtLastName" data-bind="value:Employee.LastName" />
+        </p>
+        <p>
+            <label class="form-label">Full Name:</label>
+            <input type="text" id="txtFullName" name="txtFullName" data-bind="value:Employee.FullName" readonly="readonly" />
+        </p>
+             <input type="button" id="btnSubmit" value="Submit" data-bind="click: submit" />
+            <input type="button" id="btnReset" value="Reset" data-bind="click: reset" />
+</form>
+</div>
