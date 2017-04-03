@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="Hello">Hello World, Click Me!</string>
+  <string name="ApplicationName">Asset Management</string>
+  <string name="asset_prompt">Choose an asset</string>
+  <string-array name="assets_array">
+    <item>Choose an asset</item>
+    <item>Sensor</item>
+    <item>Relay</item>
+    <item>Transformer</item>
+  </string-array>
+</resources>
