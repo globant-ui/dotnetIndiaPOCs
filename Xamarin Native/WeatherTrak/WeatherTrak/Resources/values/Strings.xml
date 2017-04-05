@@ -7,6 +7,7 @@
     <item>Choose an asset</item>
     <item>Sensor</item>
     <item>Relay</item>
-    <item>Transformer</item>
+    <item>Transformer</item>    
   </string-array>
+  <string name="openCamera">Camera</string>
 </resources>

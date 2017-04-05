@@ -284,6 +284,9 @@ namespace CurrentLocation
 			// aapt resource value: 0x7f08000a
 			public const int auto = 2131230730;
 			
+			// aapt resource value: 0x7f080016
+			public const int btnCamera = 2131230742;
+			
 			// aapt resource value: 0x7f08000b
 			public const int dark = 2131230731;
 			
@@ -308,6 +311,9 @@ namespace CurrentLocation
 			// aapt resource value: 0x7f080010
 			public const int identifier = 2131230736;
 			
+			// aapt resource value: 0x7f080017
+			public const int imageView1 = 2131230743;
+			
 			// aapt resource value: 0x7f08000c
 			public const int light = 2131230732;
 			
@@ -323,8 +329,8 @@ namespace CurrentLocation
 			// aapt resource value: 0x7f080003
 			public const int satellite = 2131230723;
 			
-			// aapt resource value: 0x7f080016
-			public const int save = 2131230742;
+			// aapt resource value: 0x7f080018
+			public const int save = 2131230744;
 			
 			// aapt resource value: 0x7f080008
 			public const int standard = 2131230728;
@@ -335,8 +341,8 @@ namespace CurrentLocation
 			// aapt resource value: 0x7f080013
 			public const int togglebutton = 2131230739;
 			
-			// aapt resource value: 0x7f080017
-			public const int watchOnMap = 2131230743;
+			// aapt resource value: 0x7f080019
+			public const int watchOnMap = 2131230745;
 			
 			// aapt resource value: 0x7f080009
 			public const int wide = 2131230729;
@@ -448,6 +454,9 @@ namespace CurrentLocation
 			
 			// aapt resource value: 0x7f05000f
 			public const int common_signin_button_text_long = 2131034127;
+			
+			// aapt resource value: 0x7f050014
+			public const int openCamera = 2131034132;
 			
 			static String()
 			{
