@@ -5,11 +5,20 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using WebDeploy.Models;
 using WebDeploy.Helper;
+using WebDeploy.ServiceAgent;
+using WebDeploy.Models;
 
 namespace WebDeploy.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly IServiceAgent _serviceAgent;
+
+        public HomeController(IServiceAgent serviceAgent)
+        {
+            _serviceAgent = serviceAgent;
+
+        }
         public IActionResult Index()
         {
             return View();
@@ -45,6 +54,10 @@ namespace WebDeploy.Controllers
             ViewData["Message"] = "Your contact page.";
             return View();
             //return RedirectToAction("Index1", "Redirect");
+        }
+        public List<Product> GetAllData()
+        {
+            return _serviceAgent.GetAllProducts();
         }
 
     }

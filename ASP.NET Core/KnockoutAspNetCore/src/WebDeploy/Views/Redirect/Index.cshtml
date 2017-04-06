@@ -1,25 +1,23 @@
 ﻿@{
-    ViewData["Title"] = "Products";
+    ViewData["Title"] = "Home Page";
 }
 <script src="@Url.Content("~/lib/jquery/dist/jquery.js")"></script>
 <script src="@Url.Content("~/lib/knockout/dist/knockout.js")"></script>
 <script src="@Url.Content("~/lib/knockout/dist/knockout.simpleGrid.3.0.js")"></script>
-<script src="@Url.Content("~/js/Refresh.js")"></script>
+<script src="@Url.Content("~/js/task.js")"></script>
 <link href="~/css/gird.css" rel="stylesheet" />
-
-<h2>@ViewData["Title"].</h2>
 <div style="padding:10px">
     <div>
-       Product Name:<br>
-        <input type="text" id="txtProductName" name="txtProductName" data-bind="value:Product.ProductName" />
-   </div>
-   <div>
-       Sales Count:<br>
-        <input type="text" id="txtSalesCount" name="txtSalesCount" data-bind="value:Product.SalesCount" />
+        Product Name:<br>
+        <input type="text" id="txtProductName" name="txtProductName" data-bind="value:Product.name" />
     </div>
     <div>
-       Price:<br>
-        <input type="text" id="txtFullName" name="txtFullName" data-bind="value:Product.Price" />
+        Sales Count:<br>
+        <input type="text" id="txtSalesCount" name="txtSalesCount" data-bind="value:Product.sales" />
+    </div>
+    <div>
+        Price:<br>
+        <input type="text" id="txtFullName" name="txtFullName" data-bind="value:Product.price" />
     </div>
     <br>
     <button data-bind='click: addItem'>
@@ -34,3 +32,6 @@
 <button data-bind='click: jumpToFirstPage, enable: gridViewModel.currentPageIndex'>
     Jump to first page
 </button>
+
+
+

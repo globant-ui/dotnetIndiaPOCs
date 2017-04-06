@@ -11,28 +11,28 @@
 <div style="padding:10px">
     <div>
         Product Name:<br>
-        <input type="text" id="txtProductName" name="txtProductName" data-bind="value:Product.ProductName" />
+        <input type="text" id="txtProductName" name="txtProductName" data-bind="value:Product.name" />
     </div>
     <div>
         Sales Count:<br>
-        <input type="text" id="txtSalesCount" name="txtSalesCount" data-bind="value:Product.SalesCount" />
+        <input type="text" id="txtSalesCount" name="txtSalesCount" data-bind="value:Product.sales" />
     </div>
     <div>
         Price:<br>
-        <input type="text" id="txtFullName" name="txtFullName" data-bind="value:Product.Price" />
+        <input type="text" id="txtFullName" name="txtFullName" data-bind="value:Product.price" />
     </div>
     <br>
     <button data-bind='click: addItem'>
-        Add item
+        Add Product
     </button>
     <br>
 </div>
 <div data-bind='simpleGrid: gridViewModel'> </div>
 <button data-bind='click: sortByName'>
-    Sort by name
+    Sort By Name
 </button>
 <button data-bind='click: jumpToFirstPage, enable: gridViewModel.currentPageIndex'>
-    Jump to first page
+    First Page
 </button>
 
 
