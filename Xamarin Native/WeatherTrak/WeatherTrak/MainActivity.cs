@@ -72,6 +72,7 @@ namespace CurrentLocation
                 Button Camera = FindViewById<Button>(Resource.Id.btnCamera);
                 _imageView = FindViewById<ImageView>(Resource.Id.imageView1);
                 Camera.Click += Camera_Click;
+                _imageView.Click += _imageView_Click;
             }
             else
             {
@@ -139,6 +140,15 @@ namespace CurrentLocation
                 Toast.MakeText(this, "Google Play Services is not installed", ToastLength.Long).Show();
                 Finish();
             }
+        }
+        // Method to open Gallary on image click 
+        private void _imageView_Click(object sender, EventArgs e)
+        {
+            Uri contentUri = Uri.FromFile(App._file);
+            Intent intent = new Intent();
+            intent.SetAction(Intent.ActionView);
+            intent.SetDataAndType(contentUri, "image/*");
+            StartActivity(intent);
         }
 
         private void Camera_Click(object sender, EventArgs e)
