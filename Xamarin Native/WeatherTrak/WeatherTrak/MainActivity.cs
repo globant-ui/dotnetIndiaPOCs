@@ -142,7 +142,7 @@ namespace CurrentLocation
             }
         }
         // Method to open Gallary on image click 
-        private void _imageView_Click(object sender, EventArgs e)
+        private void _imageView_Click(object sender, EventArgs e) 
         {
             Uri contentUri = Uri.FromFile(App._file);
             Intent intent = new Intent();
