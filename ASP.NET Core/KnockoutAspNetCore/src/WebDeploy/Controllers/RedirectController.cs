@@ -27,5 +27,13 @@ namespace WebDeploy.Controllers
         {
             return _serviceAgent.GetAllProducts();
         }
+        public IActionResult ShowLiveTime()
+        {
+            return View();
+        }
+        public List<Product> GetPriceData()
+        {
+            return _serviceAgent.GetPrice();
+        }
     }
 }

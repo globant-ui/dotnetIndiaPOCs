@@ -24,6 +24,41 @@ namespace WebDeploy.ServiceAgent
          };
             return list;
         }
-        
+
+        public List<Product> GetPrice()
+        {
+            Random r = new Random();
+            int r1 = r.Next(0, 25);
+            int r2 = r.Next(0, 25);
+            int r3 = r.Next(0, 25);
+            int r4 = r.Next(0, 25);
+            int r5 = r.Next(0, 25);
+            int r6 = r.Next(0, 25);
+            int r7 = r.Next(0, 25);
+            int r8 = r.Next(0, 25);
+            int r9 = r.Next(0, 25);
+            int r10 = r.Next(0, 25);
+
+            double basepriceHDFC = 1426.65;
+            double basepriceITC = 280.55;
+            double basepriceAxisBank = 515.45;
+            //double basepriceMarutiSuzuki = 6191.00;
+            //double basepriceTCS = 2530.85;
+            //double basepriceCipla = 597.35;
+            //double basepriceWipro = 503.50;
+            //double basepriceBhartiAirtel = 344.60;
+            //double basepriceHeroMotocorp = 3349.90;
+            //double basepriceTataMotors = 476.00;
+
+            List<Product> listStocks = new List<Product>
+            {
+                new Product { Name="HDFC Bank",  Price =Convert.ToString(basepriceHDFC +  (basepriceHDFC * r1/100)), Sales="500"},
+                new Product { Name="ITC", Price =Convert.ToString(basepriceITC +  (basepriceITC * r2/100)), Sales="404"},
+                new Product { Name="Axis Bank", Price =Convert.ToString(basepriceAxisBank +  (basepriceAxisBank * r3/100)), Sales="4020"}
+             };
+
+            return listStocks;
+
+        }
     }
 }

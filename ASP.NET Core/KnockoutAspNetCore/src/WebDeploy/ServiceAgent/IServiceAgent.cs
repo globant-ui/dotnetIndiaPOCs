@@ -9,5 +9,6 @@ namespace WebDeploy.ServiceAgent
     public interface IServiceAgent
     {
         List<Product> GetAllProducts();
+        List<Product> GetPrice();
     }
 }
