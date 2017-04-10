@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Show Live Time";
+}
+<script src="@Url.Content("~/lib/jquery/dist/jquery.js")"></script>
+<script src="@Url.Content("~/lib/knockout/dist/knockout.js")"></script>
+<script src="@Url.Content("~/lib/knockout/dist/knockout.simpleGrid.3.0.js")"></script>
+<script src="@Url.Content("~/js/time.js")"></script>
+<link href="~/css/gird.css" rel="stylesheet" />
+<h3>
+    <span data-bind="text: TimeString">Start...</span>
+</h3>
+<h4>
+    <span >Price Updates : </span>
+</h4>
+<div>
+    Name:<span data-bind="text: Name">Name...</span><br>
+    Sales:<span data-bind="text: Sales">Sales...</span><br>
+    Price:<span data-bind="text: Price">Price...</span>
+</div>
+
+
+
+

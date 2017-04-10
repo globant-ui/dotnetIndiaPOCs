@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<script src="@Url.Content("~/lib/jquery/dist/jquery.js")"></script>
+<script src="@Url.Content("~/lib/knockout/dist/knockout.js")"></script>
+<script src="@Url.Content("~/js/task.js")"></script>
+<link href="~/css/gird.css" rel="stylesheet" />
+<b>Click on cell to edit</b>
+
+<table style="padding:2px; border:1px solid gray; width:400px">
+    <thead>
+        <tr style="padding:2px;border:1px solid gray">  @*data-bind="foreach: columns*@
+            <th>Name</th>@*data-bind="text: $data"*@
+            <th>Sales</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody  data-bind="foreach: { data: items, as: 'item'}">
+        <tr data-bind="foreach: $parent.columns">
+            <td style="padding:2px;" data-bind="template: { name: item.templateToUse }, event:{click:item.selectCell}"> </td>
+        </tr>
+    </tbody>
+</table>
+
+@*<pre data-bind="text: ko.toJSON($root, null, 2)"></pre>*@
+
+<script id="read" type="text/html">
+    <div data-bind="text: item[$data]"></div>
+</script>
+
+<script id="write" type="text/html">
+        <input type="text" data-bind="value: item[$data]" />
+    </script>
+
+

@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using WebDeploy.Models;
 
 namespace WebDeploy.ServiceAgent
 {
-    interface IServiceAgent
+    public interface IServiceAgent
     {
+        List<Product> GetAllProducts();
+        List<Product> GetPrice();
     }
 }

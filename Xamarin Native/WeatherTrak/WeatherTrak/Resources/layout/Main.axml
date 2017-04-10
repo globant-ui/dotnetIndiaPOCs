@@ -156,6 +156,24 @@
             android:textColor="@android:color/black" />
     </LinearLayout>
     <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center">
+        <Button
+            android:id="@+id/btnCamera"
+            android:layout_width="167.0dp"
+            android:layout_marginLeft="120.2dp"
+            android:layout_height="wrap_content"
+            android:text="@string/openCamera" />
+        <ImageView
+            android:src="@android:drawable/ic_menu_gallery"
+            android:layout_width="fill_parent"
+            android:layout_height="300.0dp"
+            android:id="@+id/imageView1"
+            android:adjustViewBounds="true" />
+    </LinearLayout>
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"

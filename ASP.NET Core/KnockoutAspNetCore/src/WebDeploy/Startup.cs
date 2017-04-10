@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using WebDeploy.ServiceAgent;
 
 namespace WebDeploy
 {
@@ -37,6 +38,8 @@ namespace WebDeploy
             services.AddApplicationInsightsTelemetry(Configuration);
 
             services.AddMvc();
+                      
+            services.AddTransient<IServiceAgent, ServiceAgent.ServiceAgent>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -62,6 +65,7 @@ namespace WebDeploy
             app.UseStaticFiles();
 
             app.UseMvcWithDefaultRoute();
+
 
             app.UseMvc(routes =>
             {
