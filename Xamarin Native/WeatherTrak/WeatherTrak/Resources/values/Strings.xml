@@ -9,4 +9,12 @@
     <item>Relay</item>
     <item>Transformer</item>
   </string-array>
+  <string name="maptype_prompt">Choose Map Type</string>
+  <string-array name="maptype_array">
+    <item>Choose Map Type</item>
+    <item>Normal</item>
+    <item>Satellite</item>
+    <item>Hybrid</item>
+    <item>Terrain</item>
+  </string-array>
 </resources>

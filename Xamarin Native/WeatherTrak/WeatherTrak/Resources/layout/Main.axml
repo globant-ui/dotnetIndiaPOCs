@@ -172,5 +172,13 @@
             android:layout_height="wrap_content"
             android:text="Watch on Map"
             android:layout_weight="7" />
+            
+      <Button
+            android:id="@+id/btnAssetManager"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Asset Manager"
+            android:layout_weight="7" />
+
     </LinearLayout>
 </LinearLayout>

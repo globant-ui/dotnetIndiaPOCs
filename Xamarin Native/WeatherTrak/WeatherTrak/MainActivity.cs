@@ -15,7 +15,7 @@ using Android.Gms.Common;
 
 namespace CurrentLocation
 {
-    [Activity(Label = "Add Asset", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Label = "Add Asset")]
     public class MainActivity : Activity, GoogleApiClient.IConnectionCallbacks,
         GoogleApiClient.IOnConnectionFailedListener, Android.Gms.Location.ILocationListener
     {
@@ -59,6 +59,9 @@ namespace CurrentLocation
 
             Button btnWatchMap = FindViewById<Button>(Resource.Id.watchOnMap);
             btnWatchMap.Click += BtnWatchMap_Click;
+                        
+            Button btnAssetManager = FindViewById<Button>(Resource.Id.btnAssetManager);
+            btnAssetManager.Click += btnAssetManager_Click;
 
             Switch togglebutton = FindViewById<Switch>(Resource.Id.togglebutton);
             togglebutton.Click += async delegate {
@@ -117,6 +120,16 @@ namespace CurrentLocation
                 Toast.MakeText(this, "Google Play Services is not installed", ToastLength.Long).Show();
                 Finish();
             }
+        }
+
+        private void btnAssetManager_Click(object sender, EventArgs e)
+        {
+            StartActivity(typeof(AssetManagerActivity));
+        }
+
+        private void btnAssetList_Click(object sender, EventArgs e)
+        {
+            StartActivity(typeof(AssetListActivity));
         }
 
         bool IsGooglePlayServicesInstalled()

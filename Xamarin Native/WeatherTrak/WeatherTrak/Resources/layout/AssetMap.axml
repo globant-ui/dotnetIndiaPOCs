@@ -3,9 +3,22 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+  <Spinner
+            android:id="@+id/maptype"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:background="@android:color/black"
+            android:prompt="@string/maptype_prompt"
+            android:layout_weight="3" />
+  <Button
+            android:id="@+id/btnResetMap"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:text="Reset Map"
+            android:layout_weight="4" />
   <fragment
       android:id="@+id/googlemap"
       android:layout_width="match_parent"
-      android:layout_height="match_parent"
+      android:layout_height="720dp"
       class="com.google.android.gms.maps.MapFragment" />
 </LinearLayout>
