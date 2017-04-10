@@ -308,29 +308,29 @@ namespace CurrentLocation
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f08001c
-			public const int Lattitude = 2131230748;
-			
 			// aapt resource value: 0x7f08001d
-			public const int Longitude = 2131230749;
+			public const int Lattitude = 2131230749;
 			
-			// aapt resource value: 0x7f080016
-			public const int Site = 2131230742;
+			// aapt resource value: 0x7f08001e
+			public const int Longitude = 2131230750;
 			
 			// aapt resource value: 0x7f080017
-			public const int SiteName = 2131230743;
-			
-			// aapt resource value: 0x7f08001b
-			public const int TotalControllerNumbers = 2131230747;
-			
-			// aapt resource value: 0x7f08001a
-			public const int TotalControllers = 2131230746;
+			public const int Site = 2131230743;
 			
 			// aapt resource value: 0x7f080018
-			public const int TotalMeters = 2131230744;
+			public const int SiteName = 2131230744;
+			
+			// aapt resource value: 0x7f08001c
+			public const int TotalControllerNumbers = 2131230748;
+			
+			// aapt resource value: 0x7f08001b
+			public const int TotalControllers = 2131230747;
 			
 			// aapt resource value: 0x7f080019
-			public const int TotalMetersNumber = 2131230745;
+			public const int TotalMeters = 2131230745;
+			
+			// aapt resource value: 0x7f08001a
+			public const int TotalMetersNumber = 2131230746;
 			
 			// aapt resource value: 0x7f080005
 			public const int adjust_height = 2131230725;
@@ -338,20 +338,23 @@ namespace CurrentLocation
 			// aapt resource value: 0x7f080006
 			public const int adjust_width = 2131230726;
 			
-			// aapt resource value: 0x7f08001e
-			public const int assetname = 2131230750;
-			
 			// aapt resource value: 0x7f08001f
-			public const int assettype = 2131230751;
+			public const int assetname = 2131230751;
+			
+			// aapt resource value: 0x7f080020
+			public const int assettype = 2131230752;
 			
 			// aapt resource value: 0x7f08000a
 			public const int auto = 2131230730;
 			
-			// aapt resource value: 0x7f08002a
-			public const int btnAssetManager = 2131230762;
+			// aapt resource value: 0x7f080014
+			public const int btnAddAssets = 2131230740;
 			
-			// aapt resource value: 0x7f080026
-			public const int btnCamera = 2131230758;
+			// aapt resource value: 0x7f08002b
+			public const int btnAssetManager = 2131230763;
+			
+			// aapt resource value: 0x7f080027
+			public const int btnCamera = 2131230759;
 			
 			// aapt resource value: 0x7f080013
 			public const int btnResetMap = 2131230739;
@@ -359,17 +362,17 @@ namespace CurrentLocation
 			// aapt resource value: 0x7f08000b
 			public const int dark = 2131230731;
 			
-			// aapt resource value: 0x7f080021
-			public const int description = 2131230753;
+			// aapt resource value: 0x7f080022
+			public const int description = 2131230754;
 			
-			// aapt resource value: 0x7f080014
-			public const int googlemap = 2131230740;
-			
-			// aapt resource value: 0x7f080024
-			public const int gpslatitude = 2131230756;
+			// aapt resource value: 0x7f080015
+			public const int googlemap = 2131230741;
 			
 			// aapt resource value: 0x7f080025
-			public const int gpslongitude = 2131230757;
+			public const int gpslatitude = 2131230757;
+			
+			// aapt resource value: 0x7f080026
+			public const int gpslongitude = 2131230758;
 			
 			// aapt resource value: 0x7f080000
 			public const int hybrid = 2131230720;
@@ -377,11 +380,11 @@ namespace CurrentLocation
 			// aapt resource value: 0x7f080007
 			public const int icon_only = 2131230727;
 			
-			// aapt resource value: 0x7f080020
-			public const int identifier = 2131230752;
+			// aapt resource value: 0x7f080021
+			public const int identifier = 2131230753;
 			
-			// aapt resource value: 0x7f080027
-			public const int imageView1 = 2131230759;
+			// aapt resource value: 0x7f080028
+			public const int imageView1 = 2131230760;
 			
 			// aapt resource value: 0x7f080010
 			public const int imgItem = 2131230736;
@@ -389,8 +392,8 @@ namespace CurrentLocation
 			// aapt resource value: 0x7f08000d
 			public const int layOutAssetList = 2131230733;
 			
-			// aapt resource value: 0x7f080015
-			public const int lblHeading = 2131230741;
+			// aapt resource value: 0x7f080016
+			public const int lblHeading = 2131230742;
 			
 			// aapt resource value: 0x7f08000f
 			public const int lblListHeader = 2131230735;
@@ -413,14 +416,14 @@ namespace CurrentLocation
 			// aapt resource value: 0x7f080002
 			public const int normal = 2131230722;
 			
-			// aapt resource value: 0x7f080022
-			public const int purchaseprice = 2131230754;
+			// aapt resource value: 0x7f080023
+			public const int purchaseprice = 2131230755;
 			
 			// aapt resource value: 0x7f080003
 			public const int satellite = 2131230723;
 			
-			// aapt resource value: 0x7f080028
-			public const int save = 2131230760;
+			// aapt resource value: 0x7f080029
+			public const int save = 2131230761;
 			
 			// aapt resource value: 0x7f080008
 			public const int standard = 2131230728;
@@ -428,11 +431,11 @@ namespace CurrentLocation
 			// aapt resource value: 0x7f080004
 			public const int terrain = 2131230724;
 			
-			// aapt resource value: 0x7f080023
-			public const int togglebutton = 2131230755;
+			// aapt resource value: 0x7f080024
+			public const int togglebutton = 2131230756;
 			
-			// aapt resource value: 0x7f080029
-			public const int watchOnMap = 2131230761;
+			// aapt resource value: 0x7f08002a
+			public const int watchOnMap = 2131230762;
 			
 			// aapt resource value: 0x7f080009
 			public const int wide = 2131230729;
