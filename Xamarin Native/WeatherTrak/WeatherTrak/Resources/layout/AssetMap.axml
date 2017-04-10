@@ -10,15 +10,27 @@
             android:background="@android:color/black"
             android:prompt="@string/maptype_prompt"
             android:layout_weight="3" />
-  <Button
-            android:id="@+id/btnResetMap"
-            android:layout_width="fill_parent"
-            android:layout_height="40dp"
-            android:text="Reset Map"
-            android:layout_weight="4" />
+  <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Button
+              android:id="@+id/btnResetMap"
+              android:layout_width="wrap_content"
+              android:layout_height="40dp"
+              android:text="Reset Map"
+              android:layout_weight="4" />
+
+    <Button
+             android:id="@+id/btnAddAssets"
+             android:layout_width="wrap_content"
+             android:layout_height="40dp"
+             android:text="Add Assests"
+             android:layout_weight="4" />
+  </LinearLayout>
   <fragment
       android:id="@+id/googlemap"
       android:layout_width="match_parent"
       android:layout_height="720dp"
-      class="com.google.android.gms.maps.MapFragment" />
+      class="com.google.android.gms.maps.MapFragment" /> 
 </LinearLayout>

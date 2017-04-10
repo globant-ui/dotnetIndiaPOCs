@@ -3,3 +3,5 @@
 [Oo]bj/
 [Rr]elease/
 /Xamarin Native/WeatherTrak/WeatherTrak/bin/Debug
+/Xamarin Native/WeatherTrak/packages/Xamarin.Build.Download.0.4.2/build
+/Xamarin Native/googlemap/googlemap/bin/Debug

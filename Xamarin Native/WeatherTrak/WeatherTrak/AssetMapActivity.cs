@@ -44,7 +44,14 @@ namespace CurrentLocation
             SetUpMap();
 
             Button btnResetMap = FindViewById<Button>(Resource.Id.btnResetMap);
+            Button btnAddAssests = FindViewById<Button>(Resource.Id.btnAddAssets);
+            btnAddAssests.Click += BtnAddAssests_Click; 
             btnResetMap.Click += btnResetMap_Click;
+        }
+
+        private void BtnAddAssests_Click(object sender, EventArgs e)
+        {
+            StartActivity(typeof(MainActivity));
         }
 
         private void btnResetMap_Click(object sender, EventArgs e)
