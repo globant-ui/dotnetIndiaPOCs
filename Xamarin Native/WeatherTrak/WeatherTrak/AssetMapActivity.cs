@@ -17,7 +17,7 @@ using CurrentLocation.MockData;
 namespace CurrentLocation
 {
     [Activity(Label = "Map", MainLauncher = true, Icon = "@drawable/icon")]
-    public class AssetMapActivity : Activity, IOnMapReadyCallback
+    public class AssetMapActivity : Activity, IOnMapReadyCallback, GoogleMap.IInfoWindowAdapter
     {
         private GoogleMap GMap;
         private List<Marker> markerList;
@@ -132,8 +132,10 @@ namespace CurrentLocation
                 GetMainMap();
                 //
 
-                GMap.InfoWindowClick += GMap_InfoWindowClick;               
-    }
+                GMap.InfoWindowClick += GMap_InfoWindowClick;
+
+                GMap.SetInfoWindowAdapter(this);
+            }
             catch (Exception ex)
             {
                 Toast.MakeText(this, ex.Message, ToastLength.Long).Show();
@@ -185,7 +187,7 @@ namespace CurrentLocation
             
         }
 
-        
+
         //private void GMap_MapClick(object sender, GoogleMap.MapClickEventArgs e)
         //{
         //    LatLng latlng = new LatLng(e.Point.Latitude, e.Point.Longitude);
@@ -195,5 +197,24 @@ namespace CurrentLocation
         //    markerOpt1.SetSnippet("Description");
         //    GMap.AddMarker(markerOpt1);
         //}
+
+
+        public View GetInfoContents(Marker marker)
+        {
+            throw new NotImplementedException();
+        }
+
+        public View GetInfoWindow(Marker marker)
+        {
+            View view = LayoutInflater.Inflate(Resource.Layout.InfoWindow, null, false);
+            view.FindViewById<TextView>(Resource.Id.SiteName).Text = "Allegator Park";
+            view.FindViewById<TextView>(Resource.Id.TotalMetersNumber).Text = "2";
+            view.FindViewById<TextView>(Resource.Id.TotalControllerNumbers).Text = "0";
+            view.FindViewById<TextView>(Resource.Id.Lattitude).Text = "30.312455";
+            view.FindViewById<TextView>(Resource.Id.Longitude).Text = "-97.755658";
+            return view;
+        }
+
+
     }
 }

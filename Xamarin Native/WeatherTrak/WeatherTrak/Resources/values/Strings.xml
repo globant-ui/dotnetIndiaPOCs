@@ -9,6 +9,7 @@
     <item>Relay</item>
     <item>Transformer</item>
   </string-array>
+  <string name="openCamera">Open Camera</string>
   <string name="maptype_prompt">Choose Map Type</string>
   <string-array name="maptype_array">
     <item>Choose Map Type</item>

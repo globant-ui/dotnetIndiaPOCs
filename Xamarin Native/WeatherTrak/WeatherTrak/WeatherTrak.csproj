@@ -108,6 +108,7 @@
     <Compile Include="AssetManagerActivity.cs" />
     <Compile Include="AssetMapActivity.cs" />
     <Compile Include="AssetSearchActivity.cs" />
+    <Compile Include="BitmapHelpers.cs" />
     <Compile Include="ExpandableListAdapter.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="MockData\AssetMockData.cs" />
@@ -140,6 +141,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\AssetSearch.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\InfoWindow.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

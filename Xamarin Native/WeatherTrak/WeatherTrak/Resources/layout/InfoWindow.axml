@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="100"
+    android:minWidth="400px"
+    android:background="#E2E2E2">
+  <LinearLayout
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:padding="3dp">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="50"
+        android:id="@+id/Site"
+        android:textStyle="bold"
+        android:gravity="left"
+        android:text="Site"
+        android:textColor="#000" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="50"
+        android:gravity="center"
+        android:id="@+id/SiteName"
+        android:textColor="#00BFFF" />
+  </LinearLayout>
+  <LinearLayout
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:padding="3dp">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="50"
+        android:id="@+id/TotalMeters"
+        android:textStyle="bold"
+        android:text="TotalMeters"
+        android:gravity="left"
+        android:textColor="#000" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="30"
+        android:id="@+id/TotalMetersNumber"
+        android:gravity="left"
+        android:textColor="#000" />
+  </LinearLayout>
+  <LinearLayout
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:padding="3dp">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="50"
+        android:id="@+id/TotalControllers"
+        android:gravity="left"
+        android:text="Total Controllers"
+        android:textStyle="bold"
+        android:textColor="#000" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="30"
+        android:gravity="left"
+        android:id="@+id/TotalControllerNumbers"
+        android:textColor="#000" />
+  </LinearLayout>
+  <LinearLayout
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:padding="3dp">
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="30"
+        android:id="@+id/Lattitude"
+        android:gravity="left"
+        android:textColor="#000" />
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="30"
+        android:gravity="left"
+        android:id="@+id/Longitude"
+        android:textColor="#000" />
+  </LinearLayout>
+</LinearLayout>
