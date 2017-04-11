@@ -14,7 +14,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="50"
+        android:layout_weight="3"
         android:id="@+id/Site"
         android:textStyle="bold"
         android:gravity="left"
@@ -23,7 +23,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="50"
+        android:layout_weight="7"
         android:gravity="center"
         android:id="@+id/SiteName"
         android:textColor="#00BFFF" />
@@ -36,21 +36,21 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="50"
+        android:layout_weight="7"
         android:id="@+id/TotalMeters"
         android:textStyle="bold"
-        android:text="TotalMeters"
+        android:text="Total Meters : "
         android:gravity="left"
         android:textColor="#000" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="30"
+        android:layout_weight="3"
         android:id="@+id/TotalMetersNumber"
         android:gravity="left"
         android:textColor="#000" />
   </LinearLayout>
-  <LinearLayout
+<!--  <LinearLayout
       android:layout_width="fill_parent"
       android:layout_height="wrap_content"
       android:orientation="horizontal"
@@ -71,7 +71,7 @@
         android:gravity="left"
         android:id="@+id/TotalControllerNumbers"
         android:textColor="#000" />
-  </LinearLayout>
+  </LinearLayout>-->
   <LinearLayout
       android:layout_width="fill_parent"
       android:layout_height="wrap_content"

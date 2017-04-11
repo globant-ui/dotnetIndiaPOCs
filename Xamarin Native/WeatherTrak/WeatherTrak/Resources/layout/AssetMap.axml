@@ -35,10 +35,16 @@
               android:text="Reset Map"
               android:layout_weight="4" />
     <Button
+     android:id="@+id/btnGoToAssets"
+     android:layout_width="fill_parent"
+     android:layout_height="wrap_content"
+     android:text="Assets"
+     android:layout_weight="4" />
+    <Button
          android:id="@+id/btnAddAssets"
          android:layout_width="fill_parent"
          android:layout_height="wrap_content"
-         android:text="Add Assests"
+         android:text="Add Assest"
          android:layout_weight="4" />
   </LinearLayout>
   <LinearLayout

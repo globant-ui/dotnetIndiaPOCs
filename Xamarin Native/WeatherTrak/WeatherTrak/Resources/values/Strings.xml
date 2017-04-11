@@ -5,16 +5,16 @@
   <string name="asset_prompt">Choose an asset</string>
   <string-array name="assets_array">
     <item>Choose an asset</item>
-    <item>Sensor</item>
-    <item>Relay</item>
-    <item>Transformer</item>
+    <item>Controller</item>
+    <item>Meter</item>
+    <item>Splice Box</item>
   </string-array>
   <string name="openCamera">Open Camera</string>
   <string name="maptype_prompt">Choose Map Type</string>
   <string-array name="maptype_array">
+    <item>Hybrid</item>
     <item>Satellite</item>
     <item>Normal</item>
-    <item>Hybrid</item>
     <item>Terrain</item>
   </string-array>
 </resources>
