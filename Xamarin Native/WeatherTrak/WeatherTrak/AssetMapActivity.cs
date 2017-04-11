@@ -21,6 +21,7 @@ namespace CurrentLocation
     {
         private GoogleMap GMap;
         private List<Marker> markerList;
+        private List<MainAssetPositions> listAssetPositions;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -37,10 +38,20 @@ namespace CurrentLocation
             adapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
             spinner.Adapter = adapter;
 
+            AssetPositionsData positionsObj = new MockData.AssetPositionsData();
+            listAssetPositions = positionsObj.GetAssetPositonsData();
+
             SetUpMap();
 
             Button btnResetMap = FindViewById<Button>(Resource.Id.btnResetMap);
+            Button btnAddAssests = FindViewById<Button>(Resource.Id.btnAddAssets);
+            btnAddAssests.Click += BtnAddAssests_Click; 
             btnResetMap.Click += btnResetMap_Click;
+        }
+
+        private void BtnAddAssests_Click(object sender, EventArgs e)
+        {
+            StartActivity(typeof(MainActivity));
         }
 
         private void btnResetMap_Click(object sender, EventArgs e)
@@ -88,8 +99,8 @@ namespace CurrentLocation
             LatLngBounds.Builder builder = new LatLngBounds.Builder();
             List<LatLng> markers = new List<LatLng>();
                         
-            AssetPositionsData positionsObj = new MockData.AssetPositionsData();
-            List<MainAssetPositions> listAssetPositions = positionsObj.GetAssetPositonsData();
+            //AssetPositionsData positionsObj = new MockData.AssetPositionsData();
+            //List<MainAssetPositions> listAssetPositions = positionsObj.GetAssetPositonsData();
 
             for (int i = 0; i < listAssetPositions.Count; i++)
             {
@@ -118,7 +129,51 @@ namespace CurrentLocation
                 GMap.MoveCamera(camera);
             }
         }
-        
+
+        public void GetSubMap(string currentTitle)
+        {
+            LatLngBounds.Builder builder = new LatLngBounds.Builder();
+            List<LatLng> submarkers = new List<LatLng>();
+
+            //AssetPositionsData positionsObj = new MockData.AssetPositionsData();
+            //List<MainAssetPositions> listAssetPositions = positionsObj.GetAssetPositonsData();
+
+            for (int i = 0; i < listAssetPositions.Count; i++)
+            {
+                if (currentTitle == listAssetPositions[i].Title)
+                {
+                    GMap.Clear();
+                    for (int j = 0; j < listAssetPositions[i].SubAssetList.Count; j++)
+                    {
+                        LatLng sublatlng = new LatLng(listAssetPositions[i].SubAssetList[j].SubAssetLatitude, listAssetPositions[i].SubAssetList[j].SubAssetLongitude);
+                        //CameraUpdate camera = CameraUpdateFactory.NewLatLngZoom(sublatlng, 15);
+                        //GMap.MoveCamera(camera);
+                        submarkers.Add(sublatlng);
+                        MarkerOptions suboptions = new MarkerOptions()
+                                    .SetPosition(sublatlng).SetSnippet(listAssetPositions[i].SubAssetList[j].SubDescription)
+                                    .SetTitle(listAssetPositions[i].SubAssetList[j].SubTitle)
+                                    .SetIcon(BitmapDescriptorFactory.FromResource((int)typeof(Resource.Drawable).GetField(listAssetPositions[i].SubAssetList[j].SubMarkerIcon).GetValue(null)));
+                        GMap.AddMarker(suboptions);
+                    }
+                }
+            }
+
+            foreach (LatLng item in submarkers)
+            {
+                builder.Include(item);
+            }
+            if (submarkers.Count > 0)
+            {
+                LatLngBounds bounds = builder.Build();
+                int width = Resources.DisplayMetrics.WidthPixels;//  600;
+                int height = Resources.DisplayMetrics.HeightPixels;// 800;                
+                int padding = (int)(width * 0.20);
+                CameraUpdate camera = CameraUpdateFactory.NewLatLngBounds(bounds, width, height, padding);
+                GMap.MoveCamera(camera);
+            }
+
+        }
+
         public void OnMapReady(GoogleMap googleMap)
         {
             try
@@ -148,8 +203,8 @@ namespace CurrentLocation
             LatLngBounds.Builder builder = new LatLngBounds.Builder();
             List<LatLng> submarkers = new List<LatLng>();
 
-            AssetPositionsData positionsObj = new MockData.AssetPositionsData();
-            List<MainAssetPositions> listAssetPositions = positionsObj.GetAssetPositonsData();
+            //AssetPositionsData positionsObj = new MockData.AssetPositionsData();
+            //List<MainAssetPositions> listAssetPositions = positionsObj.GetAssetPositonsData();
 
             for (int i = 0; i < listAssetPositions.Count; i++)
             {
@@ -208,14 +263,13 @@ namespace CurrentLocation
         public View GetInfoWindow(Marker marker)
         {
             View view = LayoutInflater.Inflate(Resource.Layout.InfoWindow, null, false);
-            view.FindViewById<TextView>(Resource.Id.SiteName).Text = "Allegator Park";
+            view.FindViewById<TextView>(Resource.Id.SiteName).Text = marker.Title;
             view.FindViewById<TextView>(Resource.Id.TotalMetersNumber).Text = "2";
             view.FindViewById<TextView>(Resource.Id.TotalControllerNumbers).Text = "0";
-            view.FindViewById<TextView>(Resource.Id.Lattitude).Text = "30.312455";
-            view.FindViewById<TextView>(Resource.Id.Longitude).Text = "-97.755658";
+            view.FindViewById<TextView>(Resource.Id.Lattitude).Text = marker.Position.Latitude.ToString();
+            view.FindViewById<TextView>(Resource.Id.Longitude).Text = marker.Position.Longitude.ToString();
             return view;
         }
-
-
+                
     }
 }
