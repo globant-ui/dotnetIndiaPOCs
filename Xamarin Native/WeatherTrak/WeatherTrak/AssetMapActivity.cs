@@ -16,7 +16,7 @@ using CurrentLocation.MockData;
 
 namespace CurrentLocation
 {
-    [Activity(Label = "Map", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Label = "Asset Management", MainLauncher = true, Icon = "@drawable/icon")]
     public class AssetMapActivity : Activity, IOnMapReadyCallback, GoogleMap.IInfoWindowAdapter
     {
         private GoogleMap GMap;
@@ -56,13 +56,13 @@ namespace CurrentLocation
         {
             Spinner spinner = (Spinner)sender;
             
-            if (e.Position == 1)
+            if (e.Position == 0)
                 GMap.MapType = GoogleMap.MapTypeNormal;
-            else if (e.Position == 2)
+            else if (e.Position == 1)
                 GMap.MapType = GoogleMap.MapTypeSatellite;
-            else if (e.Position == 3)
+            else if (e.Position == 2)
                 GMap.MapType = GoogleMap.MapTypeHybrid;
-            else if (e.Position == 4)
+            else if (e.Position == 3)
                 GMap.MapType = GoogleMap.MapTypeTerrain;
             else
                 GMap.MapType = GoogleMap.MapTypeSatellite;
@@ -125,9 +125,10 @@ namespace CurrentLocation
             {
                 this.GMap = googleMap;
                 GMap.UiSettings.ZoomControlsEnabled = true;
-
+                
                 GMap.MapType = GoogleMap.MapTypeSatellite;
-                                               
+                //GMap.MapClick += GMap_MapClick;
+
                 //
                 GetMainMap();
                 //

@@ -2,23 +2,48 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-  <Spinner
-            android:id="@+id/maptype"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+  <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp">
+    <TextView
             android:layout_width="fill_parent"
-            android:layout_height="50dp"
-            android:background="@android:color/black"
-            android:prompt="@string/maptype_prompt"
-            android:layout_weight="3" />
+            android:layout_height="wrap_content"
+            android:text="Choose Map Type :"
+            android:layout_weight="7"
+            android:textColor="@android:color/black" />
+    <Spinner
+              android:id="@+id/maptype"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:background="@android:color/black"
+              android:prompt="@string/maptype_prompt"
+              android:layout_weight="3" />
+  </LinearLayout>
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:padding="5dp">
   <Button
-            android:id="@+id/btnResetMap"
-            android:layout_width="fill_parent"
-            android:layout_height="40dp"
-            android:text="Reset Map"
-            android:layout_weight="4" />
-  <fragment
+              android:id="@+id/btnResetMap"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:text="Reset Map"
+              android:layout_weight="4" />
+  </LinearLayout>
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:padding="5dp">
+    <fragment
       android:id="@+id/googlemap"
       android:layout_width="match_parent"
-      android:layout_height="720dp"
+      android:layout_height="wrap_content"
       class="com.google.android.gms.maps.MapFragment" />
+  </LinearLayout>
 </LinearLayout>
