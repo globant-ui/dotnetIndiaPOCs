@@ -36,6 +36,7 @@ namespace CurrentLocation
         public static double longitude;
         public static string assetName;
         public static string description;
+        public static bool fromAddAsset = false;
 
         private ImageView _imageView;
 
@@ -48,7 +49,7 @@ namespace CurrentLocation
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
-
+            fromAddAsset = true;
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
 
@@ -69,10 +70,10 @@ namespace CurrentLocation
             if (IsThereAnAppToTakePictures())
             {
                 CreateDirectoryForPictures();
-                Button Camera = FindViewById<Button>(Resource.Id.btnCamera);
-                _imageView = FindViewById<ImageView>(Resource.Id.imageView1);
-                Camera.Click += Camera_Click;
-                _imageView.Click += _imageView_Click;
+                //Button Camera = FindViewById<Button>(Resource.Id.btnCamera);
+                //_imageView = FindViewById<ImageView>(Resource.Id.imageView1);
+                //Camera.Click += Camera_Click;
+                //_imageView.Click += _imageView_Click;
             }
             else
             {
@@ -83,8 +84,8 @@ namespace CurrentLocation
             Button btnWatchMap = FindViewById<Button>(Resource.Id.watchOnMap);
             btnWatchMap.Click += BtnWatchMap_Click;
                         
-            Button btnAssetManager = FindViewById<Button>(Resource.Id.btnAssetManager);
-            btnAssetManager.Click += btnAssetManager_Click;
+            //Button btnAssetManager = FindViewById<Button>(Resource.Id.btnAssetManager);
+            //btnAssetManager.Click += btnAssetManager_Click;
 
             Switch togglebutton = FindViewById<Switch>(Resource.Id.togglebutton);
             togglebutton.Click += async delegate {
@@ -95,6 +96,8 @@ namespace CurrentLocation
 
                     if (apiClient.IsConnected)
                     {
+                        Location location = LocationServices.FusedLocationApi.GetLastLocation(apiClient);
+                        OnLocationChanged(location);
                         // Setting location priority to PRIORITY_HIGH_ACCURACY (100)
                         locRequest.SetPriority(100);
 
