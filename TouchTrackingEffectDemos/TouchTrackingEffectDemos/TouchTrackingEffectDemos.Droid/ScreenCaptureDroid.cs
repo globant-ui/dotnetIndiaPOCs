@@ -13,7 +13,7 @@ using TouchTrackingEffectDemos.Droid;
 using Android.Graphics;
 using System.IO;
 using Android.Media;
-using Foundation;
+//using Foundation;
 
 [assembly: Xamarin.Forms.Dependency(typeof(ScreenCaptureDroid))]
 

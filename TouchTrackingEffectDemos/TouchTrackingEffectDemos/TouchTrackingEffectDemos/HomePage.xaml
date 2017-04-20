@@ -33,5 +33,9 @@
         <Button Text="Silent Keyboard"
                 Command="{Binding NavigateCommand}"
                 CommandParameter="{x:Type local:SilentKeyboardPage}" />
+
+        <Button Text="Tag Image"
+                Command="{Binding NavigateCommand}"
+                CommandParameter="{x:Type local:ImageTaggingPage}" />
     </StackLayout>
 </ContentPage>

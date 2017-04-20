@@ -123,6 +123,7 @@
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ScreenCaptureDroid.cs" />
+    <Compile Include="TappableImageRenderer.cs" />
     <Compile Include="TouchEffect.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -153,6 +154,7 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\temp.jpg" />
     <AndroidResource Include="Resources\drawable\DrawBG.png" />
+    <AndroidResource Include="Resources\drawable\waterfront.jpg" />
     <Content Include="temp.jpg" />
   </ItemGroup>
   <ItemGroup>
