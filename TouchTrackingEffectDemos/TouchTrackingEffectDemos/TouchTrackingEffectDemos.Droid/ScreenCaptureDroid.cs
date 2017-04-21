@@ -26,7 +26,7 @@ namespace TouchTrackingEffectDemos.Droid
         public void CaptureScreen(SkiaSharp.SKData data) //SkiaSharp.SKData data
         {
 
-            using (var stream = File.OpenWrite(Android.OS.Environment.ExternalStorageDirectory + "/image39.png"))
+            using (var stream = File.OpenWrite(Android.OS.Environment.ExternalStorageDirectory + "/image44.png"))
             {
                 data.SaveTo(stream);
             }
