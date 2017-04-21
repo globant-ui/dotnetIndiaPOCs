@@ -9,5 +9,7 @@ namespace TouchTrackingEffectDemos
     public interface IScreenCapture
     {
         void CaptureScreen(SkiaSharp.SKData data);//SkiaSharp.SKData data
+
+        byte[] CaptureTaggedImage();
     }
 }

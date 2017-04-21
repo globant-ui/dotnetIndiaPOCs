@@ -55,12 +55,15 @@
     <Compile Include="HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ImageTaggingPage.cs" />
     <Compile Include="IScreenCapture.cs" />
+    <Compile Include="ITappableImage.cs" />
     <Compile Include="Key.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SilentKeyboardPage.xaml.cs">
       <DependentUpon>SilentKeyboardPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="TappableImage.cs" />
     <Compile Include="TouchActionEventArgs.cs" />
     <Compile Include="TouchActionEventHandler.cs" />
     <Compile Include="TouchActionType.cs" />
@@ -69,7 +72,7 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Mono.Android">
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\MonoAndroid\v7.1\Mono.Android.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\MonoAndroid\v7.1\Mono.Android.dll</HintPath>
     </Reference>
     <Reference Include="SkiaSharp, Version=1.56.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
       <HintPath>..\..\packages\SkiaSharp.1.56.0\lib\portable-net45+win8+wpa81+wp8\SkiaSharp.dll</HintPath>
