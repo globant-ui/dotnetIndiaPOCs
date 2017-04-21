@@ -15,6 +15,8 @@
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
         <Picker x:Name="colorPicker"
@@ -22,6 +24,7 @@
                 Grid.Row="0"
                 Grid.Column="0">
             <Picker.Items>
+                <x:String>White</x:String>
                 <x:String>Red</x:String>
                 <x:String>Green</x:String>
                 <x:String>Blue</x:String>
@@ -30,7 +33,6 @@
                 <x:String>Yellow</x:String>
                 <x:String>Black</x:String>
                 <x:String>Gray</x:String>
-                <x:String>White</x:String>
             </Picker.Items>
 
             <Picker.SelectedIndex>
@@ -62,12 +64,26 @@
                 VerticalOptions="Center"
                 Clicked="OnClearButtonClicked" />
 
+        <Button Text="Save"
+                Grid.Row="0"
+                Grid.Column="3"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Clicked="OnSaveButtonClicked" />
+
+        <Button Text="Get Image"
+                Grid.Row="0"
+                Grid.Column="4"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Clicked="OnGetButtonClicked" />
+
         <!-- Enclose SKCanvasView in single-cell Grid. 
                 Otherwise, iOS won't get the touch events. -->
-        
+
         <Grid Grid.Row="1"
               Grid.Column="0"
-              Grid.ColumnSpan="3"
+              Grid.ColumnSpan="5"
               BackgroundColor="White">
 
             <skia:SKCanvasView x:Name="canvasView" StyleClass=""
@@ -77,5 +93,5 @@
                                 TouchAction="OnTouchEffectAction" />
             </Grid.Effects>
         </Grid>
-    </Grid>    
+    </Grid>
 </ContentPage>

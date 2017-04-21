@@ -37,28 +37,32 @@ namespace TouchTrackingEffectDemos
 
         void OnClearButtonClicked(object sender, EventArgs args)
         {
-            //completedPolylines.Clear();
-            //canvasView.InvalidateSurface();
+            completedPolylines.Clear();
+            canvasView.InvalidateSurface();
 
-            //using (var image = SKImage.FromBitmap(resourceBitmap))
-            //using (var data = image.Encode(SKImageEncodeFormat.Png, 80))
-            //{
-            //    // save the data to a stream
-
-            //    using (var stream = System.IO.StreamWriter .OpenWrite("image1.png"))
-            //    {
-            //        data.SaveTo(stream);
-            //    }
-            //}
 
             //image1 = surf.Snapshot();
             //var image = SKImage.FromBitmap(resourceBitmap);
+
+            //Final
+            //var data = image1.Encode(SKImageEncodeFormat.Png, 80);            
+            //DependencyService.Get<IScreenCapture>().CaptureScreen(data);//data
+
+
+
+        }
+
+        void OnSaveButtonClicked(object sender, EventArgs args)
+        {
             var data = image1.Encode(SKImageEncodeFormat.Png, 80);
-            
             DependencyService.Get<IScreenCapture>().CaptureScreen(data);//data
-            
 
+            DisplayAlert("", "Image saved successfully!", "OK");
+        }
 
+        void OnGetButtonClicked(object sender, EventArgs args)
+        {
+            Navigation.PushAsync(new ImageView("image44.png"));
         }
 
         void OnTouchEffectAction(object sender, TouchActionEventArgs args)
@@ -119,11 +123,11 @@ namespace TouchTrackingEffectDemos
             //
             //Assembly assembly = GetType().GetTypeInfo().Assembly;
             //or from the entry point to the application - there is a difference!
-           // assembly.GetManifestResourceNames();//.GetExecutingAssembly().GetManifestResourceNames()
+            // assembly.GetManifestResourceNames();//.GetExecutingAssembly().GetManifestResourceNames()
 
             SKImageInfo info = args.Info;
             //surf = args.Surface;
-           // surf.Snapshot();
+            // surf.Snapshot();
             ////string resourceID = "temp.jpg";
 
             //Stream fileStream = File.OpenRead("temp.png");
@@ -154,7 +158,7 @@ namespace TouchTrackingEffectDemos
 
             SKCanvas canvas = args.Surface.Canvas;
 
-            
+
             //SKCanvas canvas = new SKCanvas(bitmap);
             canvas.Clear();
 
