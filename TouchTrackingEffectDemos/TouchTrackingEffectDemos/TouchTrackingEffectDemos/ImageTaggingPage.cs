@@ -22,7 +22,7 @@ namespace TouchTrackingEffectDemos
             Image image = new Image();          
             var page = new ContentPage();        
             var sampleimage = new Image();
-            newimage.Source = "DrawBG.png";
+            newimage.Source = "waterfront.jpg";
          
             newimage.Touched += Newimage_Touched;
             grid = new Grid();
@@ -43,7 +43,7 @@ namespace TouchTrackingEffectDemos
         
             layout = new RelativeLayout();
             btnSave = new Button();
-            btnSave.Text = "SAVE";
+            btnSave.Text = "Save";
             btnSave.HeightRequest = 50;
             btnSave.WidthRequest = 100;
            // btnSave.Height = 50;
@@ -67,10 +67,7 @@ namespace TouchTrackingEffectDemos
             var myLabel = new Label()
             {
                 Text = "Hello World",
-                //Font = Font.SystemFontOfSize(20),
-                //TextColor = Color.White,
-                //XAlign = TextAlignment.Center,
-                //YAlign = TextAlignment.Center
+            
             };
             layout.Children.Add(grid,
                 Constraint.Constant(0),
@@ -78,54 +75,22 @@ namespace TouchTrackingEffectDemos
                 Constraint.RelativeToParent((parent) => { return parent.Width; }),
                 Constraint.RelativeToParent((parent) => { return parent.Height; }));
 
-            //layout.Children.Add(myLabel,
-            //    Constraint.Constant(0),
-            //    Constraint.Constant(0),
-            //    Constraint.RelativeToParent((parent) => { return parent.Width; }),
-            //    Constraint.RelativeToParent((parent) => { return parent.Height; }));
-
-            //return new ContentPage
-            //{
-            //    Content = layout
-            //};
-           //  layout.GestureRecognizers.Add(tapGestureRecognizer);
-            //tapGestureRecognizer.Tapped += (s, e) => {
-            //    // handle the tap
-            //    Entry txt = new Entry();
-            //    //   e.ViewPoint.
-            //    double d = this.Content.X;
-            //    double w = this.Content.Y;
-            //    txt.TranslationX = d;
-            //    txt.TranslationY = w;
-            //    txt.TextColor = Color.Red;
-            //    layout.Children.Add(txt,
-            //    Constraint.Constant(0),
-            //    Constraint.Constant(0),
-            //    Constraint.RelativeToParent((parent) => { return parent.Width / 3; }),
-            //    Constraint.RelativeToParent((parent) => { return parent.Height / 3; }));
-            //    txt.Margin = new Thickness(40, 40, 40, 40);
-            //    txt.Focus();
-            //    //txt.Completed += (sender, e) => {
-            //    //    Label lblTag = new Label();
-            //    //    lblTag.Text = txt.Text;
-            //    //};
-
-            //};
-            //this.Content = content;
+            btnShow.IsVisible = false;
+            btnSave.IsVisible = false;
             this.Content = layout;
         }
 
         private void BtnShow_Clicked(object sender, EventArgs e)
         {
-          //  throw new NotImplementedException();
+            Navigation.PushAsync(new ImageView("ScreenShot.jpg"));
         }
 
         private void BtnSave_Clicked(object sender, EventArgs e)
         {
-            // var data = image1.Encode(SKImageEncodeFormat.Png, 80);
-            
             btnSave.IsVisible = false;
             DependencyService.Get<IScreenCapture>().CaptureTaggedImage();//data
+            DisplayAlert("", "Image saved successfully!", "OK");
+            btnShow.IsVisible = true;
         }
 
         private void Newimage_Touched(object sender, EventArgs e)
@@ -149,6 +114,7 @@ namespace TouchTrackingEffectDemos
             double d = this.Content.X;
             double w = this.Content.Y;
             txt.TextColor = Color.Red;
+            txt.WidthRequest = 200;
             txt.TranslationX = d;
             txt.TranslationY = w;
             RelativeLayout child = new RelativeLayout();
@@ -163,6 +129,7 @@ namespace TouchTrackingEffectDemos
             grid.Children.Add(txt);
 
             txt.Focus();
+            btnSave.IsVisible = true;
             // this.Content = content;
         }
        
