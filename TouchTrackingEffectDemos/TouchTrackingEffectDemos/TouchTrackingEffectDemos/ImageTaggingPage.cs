@@ -11,7 +11,7 @@ namespace TouchTrackingEffectDemos
     public class ImageTaggingPage : ContentPage
     {
         TappableImage newimage = new TappableImage();
-        StackLayout content = null;
+        //StackLayout content = null;
         Tuple<float, float> cor;
         RelativeLayout layout;
         Grid grid;
