@@ -67,6 +67,12 @@
     <Compile Include="SilentKeyboardPage.xaml.cs">
       <DependentUpon>SilentKeyboardPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="TagDoodlePage.xaml.cs">
+      <DependentUpon>TagDoodlePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TagImagePage.xaml.cs">
+      <DependentUpon>TagImagePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TappableImage.cs" />
     <Compile Include="TouchActionEventArgs.cs" />
     <Compile Include="TouchActionEventHandler.cs" />
@@ -144,6 +150,18 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="ImageView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="TagDoodlePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="TagImagePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

@@ -191,6 +191,19 @@ namespace TouchTrackingEffectDemos
                 canvas.DrawPath(polyline.Path, paint);
             }
 
+            //
+            //var brush = new SKPaint
+            //{               
+            //    TextSize = 64.0f,
+            //    IsAntialias = true,
+            //    Color = new SKColor(255, 255, 255, 255)
+            //};
+            ////ConvertToPixel(args.Location)
+            //canvas.DrawText("Sample text", 232,262, brush);
+            //canvas.DrawText("Sample text", ConvertToPixel(args.Surface.Canvas..Location), brush);
+            //
+
+
             image1 = args.Surface.Snapshot();
             //canvas.SaveLayer(paint);
         }

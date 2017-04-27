@@ -37,5 +37,9 @@
         <Button Text="Tag Image"
                 Command="{Binding NavigateCommand}"
                 CommandParameter="{x:Type local:ImageTaggingPage}" />
+
+        <Button Text="Tag Doodle"
+                Command="{Binding NavigateCommand}"
+                CommandParameter="{x:Type local:TagDoodlePage}" />
     </StackLayout>
 </ContentPage>
