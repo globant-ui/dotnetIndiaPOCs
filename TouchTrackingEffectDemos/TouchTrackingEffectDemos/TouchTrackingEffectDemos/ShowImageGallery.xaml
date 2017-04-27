@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TouchTrackingEffectDemos.ShowImageGallery"
+             xmlns:custom="clr-namespace:ImageGallery.Controls;assembly=TouchTrackingEffectDemos"
+                xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
+             x:Name="ShowImageGallery">
+  	<ContentPage.Content>
+		<Grid>
+			<Grid.RowDefinitions>
+				<RowDefinition
+					Height="*">
+				</RowDefinition>
+				<RowDefinition
+					Height="128">
+				</RowDefinition>
+				<!--<RowDefinition
+					Height="Auto">
+				</RowDefinition>-->
+			</Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100">                    
+                </ColumnDefinition>
+                <ColumnDefinition Width="*">
+                </ColumnDefinition>
+            </Grid.ColumnDefinitions>
+			<Image
+				Source="{Binding PreviewImage}"
+				Grid.Row="0" Grid.ColumnSpan="2">
+			</Image>
+            <!--<Image Source="cameraicon.png" x:Name="CameraImage" Grid.Column="0" Grid.Row="1">
+             
+            </Image>-->
+            <controls:ImageButton x:Name="CameraButton" Command="{Binding CameraCommand}" Source="cameraicon.png" Grid.Column="0" Grid.Row="1"  BackgroundColor="#ffffff" TextColor="#000">
+                
+            </controls:ImageButton>
+			<custom:ImageGallery Grid.Column="1"
+				ItemsSource="{Binding Images}"
+				Grid.Row="1">
+				<custom:ImageGallery.ItemTemplate>
+					<DataTemplate>
+                        <Image Grid.Column="1"
+							Source="{Binding Source}"
+							Aspect="AspectFit">
+							<Image.GestureRecognizers>
+								<TapGestureRecognizer
+									Command="{Binding Path=BindingContext.PreviewImageCommand, Source={x:Reference ShowImageGallery}}"
+									CommandParameter="{Binding ImageId}" />
+							</Image.GestureRecognizers>
+						</Image>
+					</DataTemplate>
+				</custom:ImageGallery.ItemTemplate>
+			</custom:ImageGallery>
+            <!--<Button
+                x:Name="TakePhoto"
+                Grid.Row="2"
+                Grid.ColumnSpan="2"
+				Text="Photo"
+				Command="{Binding CameraCommand}">
+			</Button>-->
+		</Grid>
+	</ContentPage.Content>
+</ContentPage>

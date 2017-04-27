@@ -30,9 +30,12 @@
                 Command="{Binding NavigateCommand}"
                 CommandParameter="{x:Type local:FingerPaintPage}" />
         
-        <Button Text="Silent Keyboard"
+        <!--<Button Text="Silent Keyboard"
                 Command="{Binding NavigateCommand}"
-                CommandParameter="{x:Type local:SilentKeyboardPage}" />
+                CommandParameter="{x:Type local:SilentKeyboardPage}" />-->
+        <Button Text="Show Image Gallery"
+                Command="{Binding NavigateCommand}"
+                CommandParameter="{x:Type local:ShowImageGallery}" />
 
         <Button Text="Tag Image"
                 Command="{Binding NavigateCommand}"

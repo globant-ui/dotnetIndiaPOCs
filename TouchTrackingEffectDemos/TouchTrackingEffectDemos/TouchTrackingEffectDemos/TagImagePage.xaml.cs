@@ -214,7 +214,7 @@ namespace TouchTrackingEffectDemos
                 //
                 var brush = new SKPaint
                 {
-                    TextSize = 28.0f,
+                    TextSize = 35.0f,
                     IsAntialias = true,
                     Color = new SKColor(255, 255, 255, 255)
                 };
@@ -233,7 +233,7 @@ namespace TouchTrackingEffectDemos
                 brush.MeasureText(txt.Text, ref textBounds);
                 //
 
-                canvas.DrawText(txt.Text, Convert.ToSingle(touchPoint1.X), Convert.ToSingle(touchPoint1.Y+25), brush);
+                canvas.DrawText(txt.Text, Convert.ToSingle(touchPoint1.X), Convert.ToSingle(touchPoint1.Y+30), brush);
                 txt.Text = "";
                 //txt.Unfocus();
 
@@ -242,7 +242,7 @@ namespace TouchTrackingEffectDemos
                 //
                 // Create a new SKRect object for the frame around the text
                 SKRect frameRect = textBounds;
-                frameRect.Offset(Convert.ToSingle(touchPoint1.X), Convert.ToSingle(touchPoint1.Y + 25));
+                frameRect.Offset(Convert.ToSingle(touchPoint1.X), Convert.ToSingle(touchPoint1.Y + 30));
                 frameRect.Inflate(10, 10);
 
                 // Create an SKPaint object to display the frame

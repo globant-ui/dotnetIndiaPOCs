@@ -8,6 +8,7 @@ namespace TouchTrackingEffectDemos
         public SilentKeyboardPage()
         {
             InitializeComponent();
+           
         }
 
         void OnKeyStatusChanged(object sender, EventArgs args)
