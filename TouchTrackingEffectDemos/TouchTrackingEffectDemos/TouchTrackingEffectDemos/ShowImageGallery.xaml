@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TouchTrackingEffectDemos.ShowImageGallery"
              xmlns:custom="clr-namespace:ImageGallery.Controls;assembly=TouchTrackingEffectDemos"
+                xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
              x:Name="ShowImageGallery">
   	<ContentPage.Content>
 		<Grid>
@@ -13,20 +14,32 @@
 				<RowDefinition
 					Height="128">
 				</RowDefinition>
-				<RowDefinition
+				<!--<RowDefinition
 					Height="Auto">
-				</RowDefinition>
+				</RowDefinition>-->
 			</Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100">                    
+                </ColumnDefinition>
+                <ColumnDefinition Width="*">
+                </ColumnDefinition>
+            </Grid.ColumnDefinitions>
 			<Image
 				Source="{Binding PreviewImage}"
-				Grid.Row="0">
+				Grid.Row="0" Grid.ColumnSpan="2">
 			</Image>
-			<custom:ImageGallery
+            <!--<Image Source="cameraicon.png" x:Name="CameraImage" Grid.Column="0" Grid.Row="1">
+             
+            </Image>-->
+            <controls:ImageButton x:Name="CameraButton" Command="{Binding CameraCommand}" Source="cameraicon.png" Grid.Column="0" Grid.Row="1"  BackgroundColor="#ffffff" TextColor="#000">
+                
+            </controls:ImageButton>
+			<custom:ImageGallery Grid.Column="1"
 				ItemsSource="{Binding Images}"
 				Grid.Row="1">
 				<custom:ImageGallery.ItemTemplate>
 					<DataTemplate>
-						<Image
+                        <Image Grid.Column="1"
 							Source="{Binding Source}"
 							Aspect="AspectFit">
 							<Image.GestureRecognizers>
@@ -38,12 +51,13 @@
 					</DataTemplate>
 				</custom:ImageGallery.ItemTemplate>
 			</custom:ImageGallery>
-            <Button
+            <!--<Button
                 x:Name="TakePhoto"
                 Grid.Row="2"
+                Grid.ColumnSpan="2"
 				Text="Photo"
 				Command="{Binding CameraCommand}">
-			</Button>
+			</Button>-->
 		</Grid>
 	</ContentPage.Content>
 </ContentPage>
