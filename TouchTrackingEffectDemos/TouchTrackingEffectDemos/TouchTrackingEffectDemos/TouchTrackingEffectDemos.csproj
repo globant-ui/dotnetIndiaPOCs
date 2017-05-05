@@ -77,6 +77,10 @@
     <Compile Include="SilentKeyboardPage.xaml.cs">
       <DependentUpon>SilentKeyboardPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SwipeGestureGrid.cs" />
+    <Compile Include="SwipeListView.xaml.cs">
+      <DependentUpon>SwipeListView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TagDoodlePage.xaml.cs">
       <DependentUpon>TagDoodlePage.xaml</DependentUpon>
     </Compile>
@@ -219,6 +223,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="ActionPopup.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SwipeListView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

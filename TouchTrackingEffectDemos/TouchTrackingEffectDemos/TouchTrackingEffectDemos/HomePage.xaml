@@ -49,5 +49,9 @@
                 Command="{Binding NavigateCommand}"
                 CommandParameter="{x:Type local:ActionPopup}" />
 
+        <Button Text="Swipe List"
+                Command="{Binding NavigateCommand}"
+                CommandParameter="{x:Type local:SwipeListView}" />
+
     </StackLayout>
 </ContentPage>
