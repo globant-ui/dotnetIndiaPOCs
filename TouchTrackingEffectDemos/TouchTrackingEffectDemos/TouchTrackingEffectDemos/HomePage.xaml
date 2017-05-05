@@ -44,5 +44,10 @@
         <Button Text="Tag Doodle"
                 Command="{Binding NavigateCommand}"
                 CommandParameter="{x:Type local:TagDoodlePage}" />
+
+        <Button Text="Action Popup"
+                Command="{Binding NavigateCommand}"
+                CommandParameter="{x:Type local:ActionPopup}" />
+
     </StackLayout>
 </ContentPage>

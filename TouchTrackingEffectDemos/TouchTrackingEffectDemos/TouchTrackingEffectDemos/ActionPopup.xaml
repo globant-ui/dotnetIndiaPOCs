@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TouchTrackingEffectDemos.ActionPopup"
+             Title="Action Popup">
+
+    <!--<Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            
+        </Grid.ColumnDefinitions>-->
+
+
+    <!--<Button Text="Show"
+                Grid.Row="0"
+                Grid.Column="0"
+                HorizontalOptions="Fill"
+                VerticalOptions="Fill"
+                Clicked="Show_Clicked" x:Name="btnShow" />-->
+
+
+    <!--<Grid HorizontalOptions="Fill" VerticalOptions="EndAndExpand" WidthRequest="300"  Grid.Row="1" BackgroundColor="Aqua" ColumnSpacing="1" RowSpacing="1"
+                Grid.Column="0" x:Name="Slider" >
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Label Text="This is sliding panel" BackgroundColor="Brown" TextColor="AliceBlue" HorizontalOptions="Center" Grid.Row="0" Grid.Column="0"
+                VerticalOptions="Start" Font="15"></Label>
+            <Label Text="This is sliding panel 2" BackgroundColor="Brown" TextColor="AliceBlue" HorizontalOptions="Center" Grid.Row="1" Grid.Column="0"
+                VerticalOptions="Start" Font="15"></Label>
+            <Label Text="This is sliding panel 3" BackgroundColor="Brown" TextColor="AliceBlue" HorizontalOptions="Center" Grid.Row="2" Grid.Column="0"
+                VerticalOptions="Start" Font="15"></Label>
+            <Label Text="This is sliding panel 4" BackgroundColor="Brown" TextColor="AliceBlue" HorizontalOptions="Center" Grid.Row="3" Grid.Column="0"
+                VerticalOptions="Start" Font="15"></Label>
+
+    </Grid>-->
+
+    <!--<AbsoluteLayout BackgroundColor="Aqua" x:Name="MainLayout">
+            <StackLayout Orientation="Vertical" BackgroundColor="White" AbsoluteLayout.LayoutBounds="1,1,1,1" AbsoluteLayout.LayoutFlags="All">
+                <Grid Padding="10,0,10,0">
+                    --><!-- Buttons and exercise title here --><!--
+                    
+                </Grid>
+
+                <ScrollView HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand">
+                    <Image x:Name="imgTab">
+                        --><!-- Music image goes here --><!--
+                    </Image>
+                </ScrollView>
+            </StackLayout>-->
+        <!--<Grid HorizontalOptions="Fill" VerticalOptions="EndAndExpand" WidthRequest="300" Grid.Row="1" BackgroundColor="Aqua" ColumnSpacing="1" RowSpacing="1"
+                Grid.Column="0" x:Name="SliderMain" >-->
+        <AbsoluteLayout  BackgroundColor="White" x:Name="aInstructions"  VerticalOptions="EndAndExpand" Padding="5">
+        <StackLayout AbsoluteLayout.LayoutBounds=".5,1,1,1" AbsoluteLayout.LayoutFlags="All" Orientation="Vertical">
+                <Button Text="Show Slider"
+                
+                HorizontalOptions="Fill"
+                VerticalOptions="Fill"
+                Clicked="Show_Clicked" BackgroundColor="DarkGray" TextColor="Black" x:Name="btnShow" />
+            <Label Text="Lorem ipsum dolor sit amet, pri illud decore mollis ei, pri ad quaeque pericula iracundia. Inermis urbanitas per id, ad vel aperiam moderatius temporibus." HorizontalOptions="Start" 
+                VerticalOptions="Start" Font="15" LineBreakMode="WordWrap"></Label>
+            <Label Text="Id vim augue dissentiet, eu eos erat tibique torquatos. Eam ad scaevola facilisi. Vis id porro putant torquatos, invidunt ocurreret sit cu. Nisl scriptorem an mel, vel ei homero vivendum. Clita aliquid atomorum ex eos." HorizontalOptions="Start"
+                VerticalOptions="Start" Font="15" LineBreakMode="WordWrap" ></Label>
+            </StackLayout>
+            <StackLayout Orientation="Vertical" AbsoluteLayout.LayoutBounds=".5,1,.75,0" AbsoluteLayout.LayoutFlags="All" x:Name="Slider">
+                <!--<Label Text="" BackgroundColor="Brown" TextColor="AliceBlue" HorizontalOptions="Center"  x:Name="Slider_Header"
+                VerticalOptions="Start" Font="20" FontAttributes="Bold" LineBreakMode="WordWrap"></Label>-->
+                <Grid   Grid.Row="1" BackgroundColor="LightGray" ColumnSpacing="1" RowSpacing="1" Padding="5"
+                Grid.Column="0" x:Name="Slider_Grid" >
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+
+
+                    </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." HorizontalOptions="Start" Grid.Row="0" Grid.Column="0"
+                VerticalOptions="Start" Font="15" TextColor="Black" LineBreakMode="WordWrap"></Label>
+                    <Button Text="Button1"
+                Grid.Row="1"
+                Grid.Column="0"
+                HorizontalOptions="Fill"
+                VerticalOptions="Fill"
+                Clicked="Button1_Clicked" BackgroundColor="DarkGray" TextColor="Black" x:Name="Button1" />
+
+                <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." HorizontalOptions="Start" Grid.Row="2" Grid.Column="0"
+                VerticalOptions="Start" Font="15" TextColor="Black" LineBreakMode="WordWrap"></Label>
+                <Label Text="Sed ut perspiciatis unde omnis iste natus error sit" HorizontalOptions="Start" Grid.Row="3" Grid.Column="0"
+                VerticalOptions="Start" Font="15" TextColor="Black" LineBreakMode="WordWrap"></Label>
+                <Label Text="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium" HorizontalOptions="Start" Grid.Row="4" Grid.Column="0"
+                VerticalOptions="Start" Font="15" TextColor="Black" LineBreakMode="WordWrap"></Label>
+
+            </Grid>
+            </StackLayout>
+        </AbsoluteLayout>
+        <!--</Grid>-->
+        <!--</AbsoluteLayout>-->
+
+   
+        
+        
+        
+            
+           
+        
+
+
+    <!--</Grid>-->
+    
+</ContentPage>
