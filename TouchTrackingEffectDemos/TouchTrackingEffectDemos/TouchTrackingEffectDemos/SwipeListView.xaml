@@ -1,5 +1,62 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="TouchTrackingEffectDemos.SwipeListView">
+             x:Class="TouchTrackingEffectDemos.SwipeListView"
+             Title="Swipe List Slider">
+
+
+    <AbsoluteLayout  BackgroundColor="White" x:Name="aInstructions"  VerticalOptions="EndAndExpand" Padding="5">
+        <StackLayout AbsoluteLayout.LayoutBounds=".5,1,1,1" AbsoluteLayout.LayoutFlags="All" Orientation="Vertical">            
+            <Label Text="Lorem ipsum dolor sit amet, pri illud decore mollis ei, pri ad quaeque pericula iracundia. Inermis urbanitas per id, ad vel aperiam moderatius temporibus." HorizontalOptions="Start" 
+                VerticalOptions="Start" Font="15" LineBreakMode="WordWrap"></Label>
+            <Label Text="Id vim augue dissentiet, eu eos erat tibique torquatos. Eam ad scaevola facilisi. Vis id porro putant torquatos, invidunt ocurreret sit cu." HorizontalOptions="Start"
+                VerticalOptions="Start" Font="15" LineBreakMode="WordWrap" ></Label>
+
+            <ListView x:Name="lsvData">
+                
+            </ListView>
+
+        </StackLayout>
+        <StackLayout Orientation="Vertical" AbsoluteLayout.LayoutBounds=".5,1,.75,0" AbsoluteLayout.LayoutFlags="All" x:Name="Slider">
+            <!--<Label Text="" BackgroundColor="Brown" TextColor="AliceBlue" HorizontalOptions="Center"  x:Name="Slider_Header"
+                VerticalOptions="Start" Font="20" FontAttributes="Bold" LineBreakMode="WordWrap"></Label>-->
+            <Grid   Grid.Row="1" BackgroundColor="LightGray" ColumnSpacing="1" RowSpacing="1" Padding="5"
+                Grid.Column="0" x:Name="Slider_Grid" >
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+
+
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Label Text="" x:Name="lblSliderHeader" Font="17" FontAttributes="Bold" Grid.Row="0" Grid.Column="0"></Label>
+                <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." HorizontalOptions="Start" Grid.Row="1" Grid.Column="0"
+                VerticalOptions="Start" Font="15" TextColor="Black" LineBreakMode="WordWrap"></Label>
+                <Button Text="Button1"
+                Grid.Row="2"
+                Grid.Column="0"
+                HorizontalOptions="Fill"
+                VerticalOptions="Fill"
+                Clicked="Button1_Clicked" BackgroundColor="DarkGray" TextColor="Black" x:Name="Button1" />
+
+                <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." HorizontalOptions="Start" Grid.Row="3" Grid.Column="0"
+                VerticalOptions="Start" Font="15" TextColor="Black" LineBreakMode="WordWrap"></Label>
+                <Label Text="Sed ut perspiciatis unde omnis iste natus error sit" HorizontalOptions="Start" Grid.Row="4" Grid.Column="0"
+                VerticalOptions="Start" Font="15" TextColor="Black" LineBreakMode="WordWrap"></Label>
+                <Label Text="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium" HorizontalOptions="Start" Grid.Row="5" Grid.Column="0"
+                VerticalOptions="Start" Font="15" TextColor="Black" LineBreakMode="WordWrap"></Label>
+
+            </Grid>
+        </StackLayout>
+    </AbsoluteLayout>
+
 </ContentPage>

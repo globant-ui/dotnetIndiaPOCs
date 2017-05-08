@@ -12,13 +12,13 @@ namespace TouchTrackingEffectDemos
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class SwipeListView : ContentPage
     {
-        ListView lsvData = new ListView()
-        {
-            VerticalOptions = LayoutOptions.Fill,
-            HorizontalOptions = LayoutOptions.Fill,
-            BackgroundColor = Color.White,
-            HasUnevenRows = true,
-        };
+        //ListView lsvData = new ListView()
+        //{
+        //    VerticalOptions = LayoutOptions.Fill,
+        //    HorizontalOptions = LayoutOptions.Fill,
+        //    BackgroundColor = Color.White,
+        //    HasUnevenRows = true,
+        //};
         List<WaterControllers> Controllers = new List<WaterControllers>();
         public SwipeListView()
         {
@@ -102,19 +102,59 @@ namespace TouchTrackingEffectDemos
             // LoadData();
             lsvData.ItemTemplate = ListDataTemplate;
             List<WaterControllers> Controllers = new List<WaterControllers>();
-            Controllers.Add(new WaterControllers { Name = "ABCD", ControllerDetails = "3232 Dallas", ControllerAlerts = "2" });
-            Controllers.Add(new WaterControllers { Name = "EFDF", ControllerDetails = "34 Dallas", ControllerAlerts = "5" });
-            Controllers.Add(new WaterControllers { Name = "SDFD", ControllerDetails = "556 Dallas", ControllerAlerts = "1" });
-            Controllers.Add(new WaterControllers { Name = "RERW", ControllerDetails = "2324 Dallas", ControllerAlerts = "3" });
+            Controllers.Add(new WaterControllers { Name = "Controller 1", ControllerDetails = "3232 Dallas", ControllerAlerts = "2" });
+            Controllers.Add(new WaterControllers { Name = "Controller 2", ControllerDetails = "34 Dallas", ControllerAlerts = "5" });
+            Controllers.Add(new WaterControllers { Name = "Controller 3", ControllerDetails = "556 Dallas", ControllerAlerts = "1" });
+            Controllers.Add(new WaterControllers { Name = "Controller 4", ControllerDetails = "2324 Dallas", ControllerAlerts = "3" });
             lsvData.ItemsSource = Controllers;
 
-            Content = lsvData;
+            //Content = lsvData;
             //     this.BindingContext = Controllers;
         }
 
         private void BtnCellView_Clicked(object sender, EventArgs e)
         {
+            //
+            if (sender is Button)
+            {
+                var templateGrid = ((Button)sender);
+                WaterControllers w = (WaterControllers)templateGrid.Parent.Parent.BindingContext;
 
+                if (Slider.Bounds.Height == 0)
+                {
+                    //Slider.MinimumHeightRequest = 400;
+                    var originalposition = Slider.Bounds;
+                    var newposition = Slider.Bounds;
+                    newposition.Height = 300;
+                    newposition.Y = originalposition.Y - newposition.Height; //325;
+                                                                             // this.Height * 2; // - Slider.Height;
+                    Slider.LayoutTo(newposition, 1000, Easing.CubicInOut);
+                    lblSliderHeader.Text = w.Name;
+                    //Slider.ScaleTo(2, 2000, Easing.Linear);
+
+                }
+                else
+                {
+                    var originalposition = Slider.Bounds;
+                    var newposition = Slider.Bounds;
+                    newposition.Y = originalposition.Y + newposition.Height; //325;
+                    newposition.Height = 0;
+                    // this.Height * 2; // - Slider.Height;
+                    Slider.LayoutTo(newposition, 1000, Easing.CubicInOut);
+                    //Slider.ScaleTo(2, 2000, Easing.Linear);
+                    lblSliderHeader.Text = w.Name;
+
+                }
+            }
+
+            //WaterControllers w = (WaterControllers)templateGrid.Parent.Parent.BindingContext;
+            //DisplayAlert("Title", w.Name, "OK");
+            //
+        }
+
+        private void Button1_Clicked(object sender, EventArgs e)
+        {
+            DisplayAlert("Message", "Button Clicked", "OK");
         }
 
         //public async void LoadData()
@@ -199,6 +239,7 @@ namespace TouchTrackingEffectDemos
         /// <param name="e"></param>
         private void BtnCellDelete_Clicked(object sender, EventArgs e)
         {
+            
             try
             {
                 if (sender is Button)
@@ -209,10 +250,14 @@ namespace TouchTrackingEffectDemos
                     if (templateGrid.Parent != null && templateGrid.Parent.Parent != null && templateGrid.Parent.Parent.BindingContext != null && templateGrid.Parent.Parent.BindingContext is string)
                     {
                         var deletedate = templateGrid.Parent.Parent.BindingContext as string;
+
+                        
                         //lstData.RemoveAll(f => f == deletedate);
                         //lsvData.ItemsSource = null;
                         //lsvData.ItemsSource = lstData;
                     }
+
+                    
                 }
             }
             catch (Exception ex)
